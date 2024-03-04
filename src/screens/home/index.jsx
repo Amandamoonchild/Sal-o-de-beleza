@@ -13,6 +13,12 @@ export default function Home() {
       >
         <Text style={styles.placeholder}>Produtos</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.navButton}
+        onPress={() => navigation.navigate("Cabelo")}
+      >
+        <Text style={styles.placeholder}>Cabelo</Text>
+      </TouchableOpacity>
     </View>
   );
 }
