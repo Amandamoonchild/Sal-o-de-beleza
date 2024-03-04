@@ -18,6 +18,7 @@ import Tratamentos from "./src/componentes/Tratamentos";
 import Acidificante from "./src/componentes/Acidificante";
 import Hidration from "./src/componentes/Hidration";
 import Umectante from "./src/componentes/Umectante";
+import Aboutme from "./src/componentes/Sobre mim";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -26,7 +27,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Produtos" component={Produto} />
+        <Stack.Screen name="Produto" component={Produto} />
         <Stack.Screen name="Apse" component={Apse} />
         <Stack.Screen name="Arvensis" component={Arvensis} />
         <Stack.Screen name="WidiCare" component={WidiCare} />
@@ -38,6 +39,7 @@ export default function App() {
         <Stack.Screen name="Acidificante" component={Acidificante} />
         <Stack.Screen name="Hidration" component={Hidration} />
         <Stack.Screen name="Umectante" component={Umectante} />
+        <Stack.Screen name="Aboutme" component={Aboutme} />
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>

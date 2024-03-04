@@ -1,19 +1,22 @@
 import { View, Text , StyleSheet, TouchableOpacity} from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
-import { Image } from 'react-native-web';
+import { Image } from 'react-native';
+import styles from "./styles"
 
 
 const Acidificante = () => {
     const navigation = useNavigation();
     return (
       <View style={styles.container}>
-    <Text>Sobre a Acidificação</Text>
-    <Image source={require("./../../../assets/apse.jpg")}  style={styles.img}/>
-    <Text>Após lavar e condicionar os cabelos com a linha SOS Cachos, 
-      aplique nos cabelos molhados ou secos o Ativador e Modelador Anti-Frizz 
-      SOS Cachos com o auxílio de um pente ou utilizando a sua técnica de aplicação 
-      favorita. Não é necessário enxaguar. Pode ser usado todos os dias.</Text>
+    <Text style={styles.title}>Sobre a Acidificação</Text>
+    <Image source={require("./../../../assets/acid.jpg")}  style={styles.img}/>
+    <Text style={styles.txt}>De forma simplificada, a acidificação capilar 
+    é um tratamento poderoso, que você faz rapidinho em casa com produtos 
+    acidificantes, ou seja, que têm o pH mais baixo e, por isso, estabilizam
+     e equilibram o pH dos fios, além de selar as cutículas, alinhar os fios,
+      reduzir o frizz e doar mais brilho.</Text>
+      <Text style={styles.txt}>R$:150,00</Text>
     <TouchableOpacity
           style={styles.navButton}
           onPress={() => navigation.navigate("Home")}
@@ -24,25 +27,5 @@ const Acidificante = () => {
 }
 
 
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: "#D3d593",
-      alignItems: "center",
-      justifyContent: "center",
-      width: 300,
-      textAlign: "center",
-      marginLeft: 30,
-      marginTop: 80,
-      marginBottom: 80,
-      height: 50,
-      textAlign: "center"
-    },
-     img: {
-      width: 200,
-      height: 200
-  }
-  
-  });
 
 export default Acidificante
