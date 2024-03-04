@@ -1,16 +1,21 @@
-import { View, Text } from 'react-native'
+import { View, Text , StyleSheet, TouchableOpacity} from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native';
+import { Image } from 'react-native';
+import styles from "./styles"
 
 const Crespos = () => {
     const navigation = useNavigation();
   return (
     <View style={styles.container}>
-  <Text>Sobre o corte para cabelos crespos</Text>
-  <Image source={require("./../../../assets/apse.jpg")}  style={styles.img}/>
-  <Text>Após lavar e condicionar os cabelos com a linha SOS Cachos, 
-    aplique nos cabelos molhados ou secos o Ativador e Modelador Anti-Frizz 
-    SOS Cachos com o auxílio de um pente ou utilizando a sua técnica de aplicação 
-    favorita. Não é necessário enxaguar. Pode ser usado todos os dias.</Text>
+  <Text style={styles.title}>Sobre o corte para cabelos crespos</Text>
+  <Image source={require("./../../../assets/crespo.jpg")}  style={styles.img}/>
+  <Text style={styles.txt}>Uma dúvida muito comum é sobre se o corte deve ser 
+  feito com os fios molhados ou secos. Sugerimos apenas que tenha em mente o 
+  fator encolhimento do cabelo crespo. Molhado os fios esticam mais e ao secar 
+  pode diminuir de tamanho aparentemente. Já com os fios secos será possível 
+  visualizar o corte e o tamanho que o cabelo vai ficar.</Text>
+    <Text style={styles.txt}> R$: 120,00</Text>
   <TouchableOpacity
         style={styles.navButton}
         onPress={() => navigation.navigate("Home")}
@@ -20,25 +25,5 @@ const Crespos = () => {
   )
 }
 
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: "#D3d593",
-      alignItems: "center",
-      justifyContent: "center",
-      width: 300,
-      textAlign: "center",
-      marginLeft: 30,
-      marginTop: 80,
-      marginBottom: 80,
-      height: 50,
-      textAlign: "center"
-    },
-     img: {
-      width: 200,
-      height: 200
-  }
-  
-  });
 
 export default Crespos
