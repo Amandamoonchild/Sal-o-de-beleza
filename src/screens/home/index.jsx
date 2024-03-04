@@ -7,6 +7,14 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
+     <View>
+      <Text>BEM VINDO!</Text>
+      <Text>Lorem ipsum dolor sit, amet consectetur 
+        adipisicing elit. Cupiditate architecto, perferendis 
+        voluptates est numquam quaerat illo ea. Tenetur nobis
+         maiores, soluta, labore officiis, inventore quidem 
+         dolor nam saepe ratione alias!</Text>
+     </View>
       <TouchableOpacity
         style={styles.navButton}
         onPress={() => navigation.navigate("Produtos")}
